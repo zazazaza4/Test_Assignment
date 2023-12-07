@@ -2,7 +2,8 @@
   "env": {
     "browser": true,
     "es2021": true,
-    "jest/globals": true
+    "jest/globals": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
@@ -19,6 +20,7 @@
   },
   "plugins": ["react", "simple-import-sort", "jest"],
   "rules": {
+    "react/display-name": "off",
     "react/prop-types": "off", // Disable prop-types
     "react/react-in-jsx-scope": "off", // Not needed for React 17+
     "react/jsx-uses-react": "off", // Not needed for React 17+

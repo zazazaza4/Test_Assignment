@@ -1,21 +1,25 @@
 import path from 'path';
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  base: 'react-starter',
-  resolve: {
-    build: {
-      outDir: 'dist',
-      assetsDir: 'assets',
-      emptyOutDir: true,
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
+  return {
+    plugins: [react()],
+    base: '/',
+    define: {
+      'process.env.REACT_APP_API_URL': JSON.stringify(env.REACT_APP_API_URL),
     },
-    alias: {
-      // eslint-disable-next-line no-undef
-      '@': path.resolve(__dirname, './src'),
+    resolve: {
+      build: {
+        outDir: 'dist',
+        assetsDir: 'assets',
+        emptyOutDir: true,
+      },
+      alias: {
+        '@': path.resolve(__dirname, './src'),
+      },
     },
-  },
+  };
 });

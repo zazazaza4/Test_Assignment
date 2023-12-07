@@ -1,0 +1,31 @@
+@import 'https://fonts.googleapis.com/css2?family=Nunito&display=swap';
+@import './variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-black-200;
+  margin: 0;
+  padding: 0;
+  background: $color-bg;
+  font-size: $base * 4;
+  line-height: $base * 6.5;
+  font-family: $font-family;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
