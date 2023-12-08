@@ -1,12 +1,15 @@
 @import '@/assets/styles/variables';
 
 .button {
+  cursor: pointer;
+
   width: $base * 25;
   height: $base * 8.5;
-  border: none;
-  cursor: pointer;
-  border-radius: $base * 20;
+
   background-color: $color-primary;
+  border: 0;
+  border-radius: $base * 20;
+
   transition: all 0.2s ease-in-out;
 
   &:hover {
@@ -14,9 +17,8 @@
   }
 
   &:disabled {
-    background-color: $color-gray-100;
-    color: white;
-
     cursor: default;
+    color: $color-white;
+    background-color: $color-gray-100;
   }
 }
