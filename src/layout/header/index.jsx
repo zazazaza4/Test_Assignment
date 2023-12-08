@@ -9,8 +9,8 @@ const Header = () => {
       <div className={`container ${styles.headerContainer}`}>
         <Logo />
         <div className={styles.headerButtons}>
-          <Button>User</Button>
-          <Button>Sing up</Button>
+          <Button>Users</Button>
+          <Button>Sign up</Button>
         </div>
       </div>
     </header>
