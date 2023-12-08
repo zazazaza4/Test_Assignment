@@ -19,7 +19,11 @@ const Upload = ({ name, register, className, error }) => {
   return (
     <div className={`${styles.upload} ${classError} ${className}`}>
       <div className={styles.uploadWrapper} data-text={truncate(fileName, 20)}>
+        <label htmlFor={name} className={styles.uploadLabel}>
+          {fileName}
+        </label>
         <input
+          id={name}
           name={name}
           type="file"
           {...register(name)}
