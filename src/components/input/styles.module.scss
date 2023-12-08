@@ -1,0 +1,74 @@
+@import '@/assets/styles/variables';
+
+.input {
+  &Group {
+    display: flex;
+    justify-content: center;
+    font-size: $base * 4;
+  }
+
+  &Label {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+
+    color: $color-gray-300;
+
+    transition: all 0.3s ease;
+  }
+
+  &Underlined {
+    position: relative;
+    width: 100%;
+  }
+
+  &Error {
+    position: absolute;
+    top: 100%;
+    left: 20px;
+
+    font-size: $base * 3.5;
+    color: $color-red-100;
+  }
+}
+
+.error {
+  .inputLabel {
+    color: $color-red-100;
+  }
+
+  input {
+    border-color: $color-red-100;
+  }
+}
+
+.inputUnderlined input {
+  width: calc(100% - 4px);
+  height: 54px;
+  padding-left: $base * 4;
+
+  background-color: $color-bg;
+  border: 0.125rem solid $color-gray-200;
+  border-radius: $base;
+  outline: none;
+
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    opacity: 0;
+  }
+
+  &:focus {
+    border-color: $color-primary;
+  }
+
+  &:focus + .inputLabel,
+  &:not(:placeholder-shown) + .inputLabel {
+    transform: translate3d(0, -28px, 0) scale(0.875);
+    background-color: $color-bg;
+  }
+}
+
+.error input:focus {
+  border-color: $color-red-100;
+}
