@@ -1,0 +1,19 @@
+@import '@/assets/styles/variables';
+
+.loader {
+  height: 220px;
+}
+
+.error {
+  &Text {
+    font-weight: bold;
+    color: $color-red-100;
+  }
+
+  &Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
