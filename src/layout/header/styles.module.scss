@@ -7,10 +7,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     height: $base * 15;
-    padding-right: $base * 15;
-    padding-left: $base * 15;
+
+    @media only screen and (max-width: $laptop) {
+      padding-right: $base * 15;
+      padding-left: $base * 15;
+    }
 
     @media only screen and (max-width: $tablet) {
       padding-right: $base * 8;

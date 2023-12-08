@@ -4,11 +4,9 @@
   position: relative;
 
   display: flex;
-  align-items: center;
   justify-content: center;
 
-  height: $base * 147.5;
-  padding-top: $base * 15;
+  height: $base * 162.5;
 
   background-color: $color-black;
 
@@ -24,13 +22,29 @@
 
   &Content {
     z-index: 3;
+
     max-width: $base * 95;
+    margin-top: $base * 41;
+
     color: $color-white;
     text-align: center;
 
+    @media only screen and (max-width: $tablet) {
+      margin-top: $base * 22;
+    }
+
     @media only screen and (max-width: $mobile) {
       max-width: $base * 82;
+      margin-top: $base * 10;
     }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    height: $base * 125;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    height: $base * 125;
   }
 }
 

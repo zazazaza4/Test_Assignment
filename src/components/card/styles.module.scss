@@ -16,6 +16,10 @@
     padding: $base * 5;
   }
 
+  &Image {
+    height: $base * 17.5;
+  }
+
   &Image img {
     width: $base * 17.5;
     height: $base * 17.5;

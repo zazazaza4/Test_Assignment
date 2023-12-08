@@ -10,7 +10,7 @@
   &Label {
     position: absolute;
     top: 16px;
-    left: 12px;
+    left: 18px;
 
     color: $color-gray-300;
 
@@ -38,7 +38,7 @@
   }
 
   input {
-    border-color: $color-red-100;
+    border-color: $color-red-100 !important;
   }
 }
 
