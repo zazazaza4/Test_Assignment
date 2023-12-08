@@ -37,4 +37,4 @@ const StaffSection = () => {
   );
 };
 
-export { StaffSection };
+export default StaffSection;

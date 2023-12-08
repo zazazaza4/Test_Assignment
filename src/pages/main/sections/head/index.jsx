@@ -24,4 +24,4 @@ const HeadSection = () => {
   );
 };
 
-export { HeadSection };
+export default HeadSection;

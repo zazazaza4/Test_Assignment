@@ -131,4 +131,4 @@ const FormSection = () => {
   );
 };
 
-export { FormSection };
+export default FormSection;
