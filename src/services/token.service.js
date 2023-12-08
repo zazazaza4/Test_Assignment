@@ -12,16 +12,12 @@ const TokenService = {
       return cachedData;
     }
 
-    try {
-      const { data } = await axios.get(`/token`);
-      const newToken = data.token;
+    const { data } = await axios.get(`/token`);
+    const newToken = data.token;
 
-      await setCache(CACHE_KEY, newToken, CACHE_TTL);
+    await setCache(CACHE_KEY, newToken, CACHE_TTL);
 
-      return newToken;
-    } catch (e) {
-      console.log(e);
-    }
+    return newToken;
   },
 };
 
