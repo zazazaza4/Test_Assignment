@@ -1,0 +1,8 @@
+@import '@/assets/styles/variables';
+
+.heading {
+  font-family: $font-family;
+  font-size: $base * 10;
+  font-weight: 400;
+  line-height: $base * 10;
+}
