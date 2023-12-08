@@ -1,0 +1,28 @@
+@import '@/assets/styles/variables';
+
+.form {
+  text-align: center;
+
+  &Container {
+    width: $base * 95;
+    margin: 0 auto;
+
+    @media only screen and (max-width: $mobile) {
+      width: $base * 80;
+    }
+  }
+
+  &Title,
+  &Input {
+    margin-bottom: $base * 12.5;
+  }
+
+  &Input &Input__last {
+    margin-bottom: 41px;
+  }
+
+  &Upload {
+    margin-top: 47px;
+    margin-bottom: $base * 12.5;
+  }
+}
