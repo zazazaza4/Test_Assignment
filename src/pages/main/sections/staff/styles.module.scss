@@ -1,0 +1,33 @@
+@import '@/assets/styles/variables';
+
+.staff {
+  text-align: center;
+
+  &Title {
+    margin-bottom: $base * 12.5;
+  }
+
+  &Cards {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $base * 7.5;
+
+    min-height: 20vh;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 50%);
+      justify-items: center;
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(auto-fill, minmax(0, $base * 82));
+      justify-content: center;
+    }
+  }
+
+  &Button {
+    margin-top: 50px;
+  }
+}
