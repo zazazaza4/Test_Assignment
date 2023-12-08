@@ -22,7 +22,7 @@ jobs:
         run: npm install --legacy-peer-deps
       
       - name: Lint
-        run: npm run lint:js && npm run lint:css
+        run: npm run lint:js && npm run lint:scss
 
       - name: Prettier
         run: npm run prettier
