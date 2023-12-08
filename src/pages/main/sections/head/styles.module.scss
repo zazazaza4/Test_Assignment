@@ -1,0 +1,43 @@
+@import '@/assets/styles/variables';
+
+.welcome {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: $base * 147.5;
+  padding-top: $base * 15;
+
+  background-color: $color-black;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    background: url('@/assets/images/head-bg.webp') 0 0 / cover no-repeat;
+    background-size: cover;
+  }
+
+  &Content {
+    z-index: 3;
+    max-width: $base * 95;
+    color: $color-white;
+    text-align: center;
+
+    @media only screen and (max-width: $mobile) {
+      max-width: $base * 82;
+    }
+  }
+}
+
+.welcomeText {
+  margin-bottom: $base * 8;
+
+  > *:first-child {
+    margin-bottom: 21px;
+  }
+}
