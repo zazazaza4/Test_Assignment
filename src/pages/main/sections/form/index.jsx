@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { mixed, number, object, string } from 'yup';
 
@@ -39,7 +40,7 @@ const schema = object({
 }).required();
 
 const FormSection = () => {
-  const success = false;
+  const [success, setSuccess] = useState(false);
   const { positions, isLoading } = usePositions();
 
   const {
@@ -61,6 +62,7 @@ const FormSection = () => {
       formData.append('photo', data.photo[0]);
 
       await UserService.create(formData);
+      setSuccess(true);
     } catch (error) {
       console.error('Error submitting form:', error);
     }
