@@ -12,7 +12,7 @@ const Card = memo(({ name, position, email, phone, photo }) => {
     <article className={styles.cart}>
       <div className={styles.cartContent}>
         <div className={styles.cartImage}>
-          <img src={photo || defaultPhoto} alt={name} />
+          <img loading="lazy" src={photo || defaultPhoto} alt={name} />
         </div>
         <Text isBlackText>{truncate(name)}</Text>
         <div className={styles.cartInfo}>
