@@ -8,20 +8,19 @@
 .uploadWrapper {
   position: relative;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: calc(100% - 2px);
   height: $base * 13;
 
   border: 1px solid $color-gray-200;
   border-radius: $base;
 
-  &::before {
+  &::after {
     pointer-events: none;
     content: attr(data-text);
-
-    position: absolute;
-    z-index: 20;
-    top: 0;
-    left: 22%;
 
     display: block;
 
@@ -34,19 +33,17 @@
     text-align: left;
 
     background: #fff;
-    border-radius: $base;
+    border: 1px solid $color-gray-300;
+    border-left: 0;
+    border-left-width: 0;
+    border-radius: 0 $base $base 0;
   }
 
-  &::after {
+  &::before {
     pointer-events: none;
     content: 'Upload';
 
-    position: absolute;
-    z-index: 25;
-    top: -1px;
-    left: -1px;
-
-    display: inline-block;
+    display: block;
 
     height: $base * 13.5 - 2px;
     padding: 0 15px;
@@ -75,6 +72,10 @@
 
     opacity: 0;
   }
+
+  label {
+    display: none;
+  }
 }
 
 .uploadError {
@@ -90,7 +91,7 @@
   border-color: $color-red-100;
 }
 
-.error .uploadWrapper::after {
-  border: none 1px 1px none;
+.error .uploadWrapper::before,
+.uploadWrapper::after {
   border-color: $color-red-100;
 }
