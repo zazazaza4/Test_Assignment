@@ -1,0 +1,13 @@
+@import '@/assets/styles/variables';
+
+.main {
+  margin-bottom: $base * 25;
+}
+
+.main > section {
+  margin-top: $base * 35;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
