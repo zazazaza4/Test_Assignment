@@ -17,8 +17,12 @@ const Card = memo(({ name, position, email, phone, photo }) => {
         <Text isBlackText>{truncate(name)}</Text>
         <div className={styles.cartInfo}>
           <Text isBlackText>{truncate(position)}</Text>
-          <Text isBlackText>{truncate(email)}</Text>
-          <Text isBlackText>{truncate(phone, 14)}</Text>
+          <Text title={email} isBlackText>
+            {truncate(email)}
+          </Text>
+          <Text title={phone} isBlackText>
+            {truncate(phone, 14)}
+          </Text>
         </div>
       </div>
     </article>

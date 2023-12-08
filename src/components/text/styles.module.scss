@@ -1,6 +1,8 @@
 @import '@/assets/styles/variables';
 
 .text {
+  position: relative;
+
   font-family: $font-family;
   font-size: $base * 4;
   line-height: $base * 6.5;
@@ -9,4 +11,29 @@
   &Black {
     color: $color-black-200;
   }
+
+  .title {
+    display: none;
+  }
+
+  &:hover .title {
+    position: absolute;
+    z-index: 4;
+    top: 100%;
+    right: 0;
+
+    display: block;
+
+    padding: $base $base * 4;
+
+    color: $color-white;
+    text-decoration: none;
+
+    background-color: $color-black-200;
+    border-radius: $base;
+  }
+}
+
+.isPointer {
+  cursor: pointer;
 }
