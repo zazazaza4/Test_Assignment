@@ -1,0 +1,60 @@
+@import '@/assets/styles/variables';
+
+.select {
+  margin-top: $base * 11;
+  text-align: left;
+}
+
+.selectTitle {
+  margin-bottom: $base * 2.75;
+}
+
+.radio {
+  cursor: pointer;
+  display: flex;
+  align-items: stretch;
+  margin-bottom: $base * 1.75;
+}
+
+.radio input {
+  display: none;
+  opacity: 0;
+}
+
+.radio input + .radioLabel {
+  cursor: pointer;
+  width: 100%;
+
+  &::before {
+    cursor: pointer;
+    content: '';
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: inline-block;
+
+    width: $base * 5;
+    height: $base * 5;
+    margin-right: $base * 3;
+
+    text-align: center;
+
+    background: $color-bg;
+    border: 1px solid $color-gray-200;
+    border-radius: 50%;
+
+    transition: all 250ms ease;
+  }
+}
+
+.radio input:checked + .radioLabel::before {
+  background-color: $color-secondary;
+  border-color: $color-secondary;
+  box-shadow: inset 0 0 0 $base $color-bg;
+}
+
+.error .selectTitle {
+  color: $color-red-100;
+}
