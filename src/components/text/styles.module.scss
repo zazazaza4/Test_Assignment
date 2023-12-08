@@ -1,0 +1,12 @@
+@import '@/assets/styles/variables';
+
+.text {
+  font-family: $font-family;
+  font-size: $base * 4;
+  line-height: $base * 6.5;
+  color: $color-white;
+
+  &Black {
+    color: $color-black-200;
+  }
+}
