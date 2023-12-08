@@ -87,11 +87,7 @@
   color: $color-red-100;
 }
 
-.error .uploadWrapper {
-  border-color: $color-red-100;
-}
-
 .error .uploadWrapper::before,
-.uploadWrapper::after {
+.error .uploadWrapper::after {
   border-color: $color-red-100;
 }
