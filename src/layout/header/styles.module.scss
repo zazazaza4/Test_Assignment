@@ -1,0 +1,29 @@
+@import '@/assets/styles/variables';
+
+.header {
+  background-color: $color-white;
+
+  &Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: $base * 15;
+    padding-right: $base * 15;
+    padding-left: $base * 15;
+
+    @media only screen and (max-width: $tablet) {
+      padding-right: $base * 8;
+      padding-left: $base * 8;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      padding-right: $base * 4;
+      padding-left: $base * 4;
+    }
+  }
+
+  &Buttons button:first-child {
+    margin-right: $base * 2.5;
+  }
+}
