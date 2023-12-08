@@ -1,0 +1,96 @@
+@import '@/assets/styles/variables';
+
+.upload {
+  cursor: pointer;
+  position: relative;
+}
+
+.uploadWrapper {
+  position: relative;
+
+  width: calc(100% - 2px);
+  height: $base * 13;
+
+  border: 1px solid $color-gray-200;
+  border-radius: $base;
+
+  &::before {
+    pointer-events: none;
+    content: attr(data-text);
+
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 22%;
+
+    display: block;
+
+    width: calc(100% - 113px);
+    height: $base * 13 - 20px;
+    padding: 10px 15px;
+
+    line-height: $base * 13.5 - 20px;
+    color: $color-gray-300;
+    text-align: left;
+
+    background: #fff;
+    border-radius: $base;
+  }
+
+  &::after {
+    pointer-events: none;
+    content: 'Upload';
+
+    position: absolute;
+    z-index: 25;
+    top: -1px;
+    left: -1px;
+
+    display: inline-block;
+
+    height: $base * 13.5 - 2px;
+    padding: 0 15px;
+
+    font-size: 16px;
+    line-height: $base * 13.5;
+    color: $color-black-200;
+
+    border: 1px solid $color-black-200;
+    border-radius: $base 0 0 $base;
+  }
+
+  input {
+    cursor: pointer;
+
+    position: absolute;
+    z-index: 15;
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: $base * 13.5 - 20px;
+    margin: 0;
+    padding: 0;
+
+    opacity: 0;
+  }
+}
+
+.uploadError {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+
+  font-size: $base * 3.5;
+  color: $color-red-100;
+}
+
+.error .uploadWrapper {
+  border-color: $color-red-100;
+}
+
+.error .uploadWrapper::after {
+  border: none 1px 1px none;
+  border-color: $color-red-100;
+}
